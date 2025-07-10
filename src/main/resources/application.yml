@@ -1,4 +1,7 @@
 spring:
+  application:
+    name: spring-ai
   ai:
     openai:
       api-key: ${VICTOR_API_KEY}
+      model: gpt-3.5-turbo
