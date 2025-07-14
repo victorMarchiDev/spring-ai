@@ -12,15 +12,14 @@ function App() {
 
   return (
     <div className="App">
-      
-      //Botão de pergunte para o AI
+      {/* Botão de pergunte para o AI */}
       <button 
         className={activeTab === 'ask-ai' ? 'active' : ''}
         onClick={() => handleTabChange('ask-ai')}>
         Talk With AI
       </button>
 
-      //Botão de gerador de receitas
+      {/* Botão de gerador de receitas */}
       <button 
        className={activeTab === 'recipe-generator' ? 'active' : ''}
        onClick={() => handleTabChange('recipe-generator')}>
