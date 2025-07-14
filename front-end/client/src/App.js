@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [activeTab, setActiveTab] = useState('ask-ai');
+
+  const handleTabChange = (tab) => {
+    alert(tab);
+    setActiveTab(tab);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Olá esse é o meu client react
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => handleTabChange('ask-ai')}>Talk With AI</button>
+      <button onClick={() => handleTabChange('recipe-generator')}>Generate Recipe</button>
     </div>
   );
 }
