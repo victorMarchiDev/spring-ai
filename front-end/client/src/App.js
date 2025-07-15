@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './App.css';
+import RecipeGenerator from './pages/chat/recipe/RecipeGenerator';
+import TalkWithAI from './pages/chat/TalkWithAI';
 
 function App() {
 
@@ -27,8 +29,8 @@ function App() {
       </button>
 
       <div>
-        {activeTab === 'ask-ai' && <h2>Talk With AI</h2>}
-        {activeTab === 'recipe-generator' && <h2>Generate Recipes</h2>}
+        {activeTab === 'ask-ai' && <TalkWithAI />}
+        {activeTab === 'recipe-generator' && <RecipeGenerator />}
       </div>
 
 
