@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozinha Sustentável - Gerador de Receitas com IA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🍲 Cozinha Sustentável</h1>
+    <p class="subtitle">Transforme sobras da geladeira em receitas deliciosas!</p>
+
+    <form id="recipe-form">
+      <label for="ingredients">🧺 Ingredientes disponíveis:</label>
+      <textarea id="ingredients" placeholder="Ex: tomate, arroz, frango..." required></textarea>
+
+      <label for="cuisine">🌍 Tipo de cozinha:</label>
+      <select id="cuisine">
+        <option value="any">Qualquer</option>
+        <option value="brasileira">Brasileira</option>
+        <option value="italiana">Italiana</option>
+        <option value="mexicana">Mexicana</option>
+        <option value="japonesa">Japonesa</option>
+        <option value="indiana">Indiana</option>
+      </select>
+
+      <label for="diet">🥗 Restrições alimentares:</label>
+      <select id="diet">
+        <option value="none">Nenhuma</option>
+        <option value="vegetariana">Vegetariana</option>
+        <option value="vegana">Vegana</option>
+        <option value="sem-gluten">Sem glúten</option>
+        <option value="sem-lactose">Sem lactose</option>
+      </select>
+
+      <button type="submit">Gerar Receita</button>
+    </form>
+
+    <div id="loading" class="hidden">✨ Gerando sua receita...</div>
+
+    <div id="recipe-result" class="hidden">
+      <h2>🍽️ Receita Sugerida</h2>
+      <pre id="recipe-output"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

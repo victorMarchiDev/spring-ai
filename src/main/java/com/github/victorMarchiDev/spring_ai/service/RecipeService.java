@@ -19,10 +19,13 @@ public class RecipeService {
     public String createRecipe(String ingredients, String cuisine, String dietaryRestrictions){
         //Definindo o template do prompt que vamos utilizar na query
         var template = """
-                I want to create a recipe using the following ingredients: {ingredients}.
-                The cuisine type I prefer is {cuisine}.
-                Please consider the following dietary restrictions: {dietaryRestrictions}. 
-                Please provide me with a detailed recipe including title, list of ingredients and cooking instructions
+                Quero criar uma receita usando os seguintes ingredientes: {ingredients}.
+                O tipo de cozinha que eu prefiro é {cuisine}.
+                Por favor, considere as seguintes restrições alimentares: {dietaryRestrictions}.
+                Forneça uma receita detalhada com título, lista de ingredientes** e modo de preparo.
+                A receita deve ser direta e sem decorações ou emojis.
+                Use apenas texto simples, sem formatação Markdown.
+                Inclua apenas: título da receita, lista de ingredientes e modo de preparo, em formato conciso e claro.
                 """;
         //Criando um objeto do tipo PromptTemplate e atribuindo a ele, os templates que colocamos
         PromptTemplate promptTemplate = new PromptTemplate(template);
